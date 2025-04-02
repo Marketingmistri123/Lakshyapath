@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Path - India's First Career Counseling Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Header with Hamburger Menu */
+        header {
+            background-color: #f8f8f8;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #2e7d32;
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav-menu a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Sections */
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .section h3 {
+            color: #2e7d32;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        /* Forms */
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-container button:hover {
+            background-color: #1b5e20;
+        }
+
+        /* Partner List */
+        .partner-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .partner-list li {
+            margin: 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* How It Works List */
+        .steps-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .steps-list li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Jobs List */
+        .jobs-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .jobs-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        /* Report */
+        #report {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header>
+        <h1>Lakshya Path</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <a href="#intro">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#career">Career Guidance</a>
+            <a href="#market-research">Market Research</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#partners">Partners</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- India's First Career Counseling Platform -->
+    <div class="section" id="intro">
+        <h2>India's First Career Counseling Platform</h2>
+        <p>Where <span class="highlight">Education</span> with <span class="highlight">Guidance</span> Meets <span class="highlight">Employment</span>!</p>
+        <p>In India, education and employment are often disconnected—students pursue degrees and wrong career paths, leading to unfulfilled dreams and unemployment. Lakshya Path bridges this gap by integrating career guidance, Vedic astrology, and job opportunities, ensuring rural students and parents make informed choices for a brighter future.</p>
+    </div>
+
+    <!-- How This Works -->
+    <div class="section" id="how-it-works">
+        <h2>How This Works</h2>
+        <p>At Lakshya Path, we follow a simple yet effective process to help you achieve your career goals while working to transform your area into an educational hub:</p>
+        <ul class="steps-list">
+            <li><strong>Discover Your Path:</strong> Share your birth details and interests to get a personalized career roadmap using Vedic astrology.</li>
+            <li><strong>Explore Opportunities:</strong> Access our resources to learn about courses, skills, and job options that match your profile.</li>
+            <li><strong>Build an Educational Hub:</strong> Share your area’s needs through our market research form—we’ll use this data to bring reputed coaching centers and job opportunities to your region, making it an educational hub for a better future.</li>
+            <li><strong>Stay Supported:</strong> Connect with our counselors for ongoing guidance and join our community for mentorship and support.</li>
+        </ul>
+        <p><strong>Our Commitment:</strong> We’re trying to make your area an educational hub by bringing quality education and employment opportunities closer to you!</p>
+    </div>
+
+    <!-- About Us -->
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>We are Lakshya Path—a platform dedicated to helping rural students unlock their potential through Vedic astrology and personalized counseling. Our mission is to bridge the gap between education and employment, transforming rural areas into educational hubs where opportunities thrive.</p>
+        <p><strong>Why Choose Us?</strong> We offer free mentorship sessions, scholarship guidance, and local language support to make your journey seamless.</p>
+    </div>
+
+    <!-- Connect to a Career Counselor -->
+    <div class="section" id="career">
+        <h2>Connect to a Career Counselor</h2>
+        <p>Get a personalized roadmap based on your interests and what your Kundali says about your career path. Our Vedic astrology experts analyze your birth chart to suggest the best career options for you.</p>
+        <div class="form-container">
+            <form id="careerForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="date" id="dob" placeholder="Date of Birth" required>
+                <input type="time" id="tob" placeholder="Time of Birth" required>
+                <input type="text" id="pob" placeholder="Place of Birth" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </div>
+        <div id="report"></div>
+        <p><strong>Special Offer:</strong> First 50 users get a free detailed Vedic astrology consultation!</p>
+    </div>
+
+    <!-- Market Research -->
+    <div class="section" id="market-research">
+        <h2>Market Research for Educational Hub</h2>
+        <p>We aim to make your area an educational hub by bringing reputed coaching centers closer to you. Share your needs, and if there’s enough potential in your pincode area, we’ll work to open a center of a reputed coaching institute in your region.</p>
+        <div class="form-container">
+            <form id="marketForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="number" placeholder="Age" required>
+                <input type="text" placeholder="Pincode" required>
+                <input type="text" placeholder="Preferred Subjects (e.g., Math, Science)" required>
+                <input type="text" placeholder="Preferred Coaching Institute (optional)">
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <p><strong>Incentive:</strong> Areas with the highest responses will get a free career fair and priority for coaching center establishment!</p>
+    </div>
+
+    <!-- Jobs for Freshers and Graduates -->
+    <div class="section" id="jobs">
+        <h2>Jobs for Freshers and Graduates</h2>
+        <p>Explore job opportunities tailored for general graduates and freshers in rural areas. Start your career journey with Lakshya Path!</p>
+        <ul class="jobs-list">
+            <li>
+                <strong>Data Entry Operator</strong> - Jaipur, Rajasthan<br>
+                Salary: ₹15,000/month | No experience required | Contact: support@lakshyapath.com
+            </li>
+            <li>
+                <strong>Customer Support Executive</strong> - Work from Home<br>
+                Salary: ₹12,000-₹18,000/month | Freshers welcome | Contact: support@lakshyapath.com
+            </li>
+            <li>
+                <strong>Field Sales Representative</strong> - Sikar, Rajasthan<br>
+                Salary: ₹10,000/month + incentives | Basic communication skills needed | Contact: support@lakshyapath.com
+            </li>
+            <li>
+                <strong>Online Tutor (Part-Time)</strong> - Remote<br>
+                Salary: ₹8,000-₹12,000/month | Teach school students | Contact: support@lakshyapath.com
+            </li>
+        </ul>
+        <p><strong>More Opportunities:</strong> Stay tuned for more job listings, including government jobs and local opportunities!</p>
+    </div>
+
+    <!-- Schools, Colleges, and Coachings Tie-Up -->
+    <div class="section" id="partners">
+        <h2>Schools, Colleges, and Coachings Tie-Up</h2>
+        <p>We are proud to partner with schools, colleges, and coaching institutes that support our vision of empowering rural students. With the trust and admiration of students and parents, we successfully established an Aakash Institute in Suncity, Jaipur. This milestone is a step towards making our area an educational hub for your future loved ones, ensuring they don’t have to travel far or leave their families for quality education.</p>
+        
+        <h3>Schools</h3>
+        <p>Our partner schools have played a crucial role in providing market research data, helping us understand the educational needs of rural students. Their support has been instrumental in bringing quality education closer to home.</p>
+        <ul class="partner-list">
+            <li>Oxford International School, Rajawas, Jaipur</li>
+            <li>Vedanta International Academy, Chonp Knowledge City (where India’s second-largest cricket stadium is under construction)</li>
+            <li>Bright Moon Public School, Suncity</li>
+            <li>Sunshine Convent School, Khorashyamdas</li>
+        </ul>
+
+        <h3>Colleges</h3>
+        <p>We collaborate with colleges that share our vision of transforming rural areas into educational hubs. Their support in market research helps us bring more opportunities for students, including government job coaching.</p>
+        <ul class="partner-list">
+            <li>Bharat College, Tatiyawas Toll</li>
+            <li>Shree Ram College, Todi, near Tirupati Nilay</li>
+            <li>Government Degree College, Sikar</li>
+            <li>Rural Education Society, Neem Ka Thana</li>
+        </ul>
+
+        <h3>Coachings</h3>
+        <p>Our partner coaching institutes are helping us make quality education accessible to rural students. We are committed to expanding this network to include more reputed institutes.</p>
+        <ul class="partner-list">
+            <li>Aakash Institute, Suncity—our first moving step towards our vision to make our area an educational hub, best for rural students.</li>
+            <li>New upcoming high-reputed coaching for government job preparation near our area—fill out the market research form above to help us bring this to your region and save students’ travel time!</li>
+        </ul>
+
+        <p><strong>Join Us:</strong> We invite more schools, colleges, and coaching institutes to tie up with us! If your institution wants to be part of this transformative journey, please send your details to support@lakshyapath.com. Together, we can host free career workshops, Vedic astrology sessions, and bring more educational opportunities to rural students.</p>
+        <p><strong>Our Vision:</strong> By collaborating with educational institutions, we aim to establish more reputed institutes like Aakash, ensuring your loved ones have access to quality education without leaving their families. Let’s make our area a thriving educational hub together!</p>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@lakshyapath.com | Phone: +91-1234567890</p>
+        <p><strong>Exclusive Offer:</strong> First 100 inquiries receive a free Vedic astrology consultation!</p>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Career Form Submission
+        document.getElementById('careerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const dob = document.getElementById('dob').value;
+            const tob = document.getElementById('tob').value;
+            const pob = document.getElementById('pob').value;
+
+            const report = `<p>Thank you, ${name}! Based on your birth details (DOB: ${dob}, TOB: ${tob}, POB: ${pob}), our experts suggest a career in teaching or management. We will contact you soon for a detailed consultation.</p>`;
+            document.getElementById('report').innerHTML = report;
+        });
+
+        // Market Research Form Submission
+        document.getElementById('marketForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your response! We will analyze the potential of your area and get back to you.');
+        });
+    </script>
+</body>
+</html>
